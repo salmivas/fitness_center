@@ -1,0 +1,11 @@
+.memberships {
+  height: 851px;
+
+  @media (max-width: $max-tablet-width) {
+    height: 1779px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 1489px;
+  }
+}
