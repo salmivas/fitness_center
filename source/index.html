@@ -1,13 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="Description" content="Сайт фитнес-центра Super Gym">
+    <title>Фитнес-центр Super Gym</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/roboto-condensed_regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/roboto-condensed_bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/bebas-neue_bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/roboto-condensed_light.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/bebas-neue_regular.woff2" as="font" type="font/woff2">
+  </head>
+
+  <body>
+    <div style="display:none;">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo">
+          <svg width="87" height="20" viewbox="0 0 87 20" role="img">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <div class="header__contacts">
+          <a href="tel:88005555555" class="header__phone">8-800-555-55-55</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro">
+        <div class="intro__container">
+          <div class="intro__text-content-wrapper">
+            <p class="intro__city">Омск</p>
+            <div class="intro__headline-wrapper">
+              <h1>Фитнес центр</h1>
+              <ul>
+                <li>Тренажёрный зал</li>
+                <li>Групповые занятия</li>
+                <li>Кардио зона</li>
+              </ul>
+            </div>
+            <a href="" class="intro__membership-link">Купить абонемент</a>
+            <ul class="intro__socials">
+              <li><a href="#"></a>fb</li>
+              <li><a href="#"></a>vk</li>
+              <li><a href="#"></a>ig</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="gym">
+        <div class="gym__container">
+          <div class="gym__text-content-wrapper">
+            <h2>Тренажерный зал</h2>
+            <p class="gym__subtitle">Просторный зал площадью 900 кв/м</p>
+            <article class="gym__info">
+              <p>
+                Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+              </p>
+              <p>
+                В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+              </p>
+            </article>
+          </div>
+          <div class="gym__picture">
+            <picture>
+              <!-- 1х: 640px; 2x: 640px -->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/gym_mobile_photo@2x.webp">
+              <!-- 1х: 640px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/gym_mobile_photo@2x.jpg">
+              <!-- 1х: 678px; 2x: 1356px -->
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym_tablet_photo@1x.webp, img/gym_tablet_photo@2x.webp 2x">
+              <!-- 1х: 678px; 2x: 1356px -->
+              <source media="(max-width: 1199px)" srcset="img/gym_tablet_photo@1x.jpg, img/gym_tablet_photo@2x.jpg 2x">
+              <!-- 1х: 660px; 2x: 1220px -->
+              <source type="image/webp" srcset="img/gym_photo@1x.webp, img/gym_photo@2x.webp 2x">
+              <!-- 1х: 660px; 2x: 1220px -->
+              <img src="img/gym_photo@1x.jpg" srcset="img/gym_photo@2x.jpg 2x" alt="Тренажёрный зал" width="660" height="401">
+            </picture>
+          </div>
+          <div class="gym__video">
+            <button type="button" aria-label="Воспроизветси презентацию">
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="vendor/swiper.js"></script>
+    <script src="vendor/picturefill.js"></script>
+    <script src="vendor/imask.js"></script>
+    <script src="paragraph-truncate.js"></script>
+    <!-- <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script> -->
+  </body>
+
 </html>

@@ -1,0 +1,1 @@
+"use strict";!function(){var e=document.querySelectorAll(".gym__info > p"),i="visually-hidden",t=window.matchMedia("(max-width: 1199px)");if(e){var n=function(){for(var n=1;n<e.length;n++)t.matches&&e.length>1?e[n].classList.add(i):e[n].classList.remove(i)};n(),window.addEventListener("resize",n)}}();

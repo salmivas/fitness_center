@@ -1,0 +1,202 @@
+.gym__container {
+  @include container;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 120px 0 228px 4.4vw;
+
+  @media (max-width: $max-tablet-width) {
+    @include center-y-by-flex-column;
+
+    padding: 100px 0 177px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: auto;
+    padding: 68px 0;
+  }
+}
+
+.gym__text-content-wrapper {
+  padding: 47px 0 0;
+  max-width: 355px;
+
+  @media (max-width: $max-tablet-width) {
+    @include center-y-by-flex-column;
+
+    padding: 0;
+    margin: 0 0 35px;
+
+    max-width: 74%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include container;
+
+    align-items: flex-start;
+  }
+}
+
+.gym__text-content-wrapper h2 {
+  margin: 0 0 7px;
+}
+
+.gym__subtitle {
+  margin: 0 0 40px;
+
+  font-size: 18px;
+  line-height: 27px;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 36px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 24px;
+  }
+}
+
+.gym__info {
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 26px;
+  }
+}
+
+.gym__info p {
+  margin: 0;
+
+  font-weight: 300;
+
+  &:not(:last-of-type) {
+    margin: 0 0 8px;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    text-align: center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    text-align: left;
+  }
+}
+
+.gym__picture {
+  @media (max-width: $max-tablet-width) {
+    display: flex;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 34px;
+  }
+}
+
+.gym__picture img {
+  margin-left: 20px;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0;
+    width: 820px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 600px;
+  }
+}
+
+.gym__video {
+  @include center-xy-by-flex-row;
+
+  position: absolute;
+  top: 54%;
+  left: calc(13vw + 259px);
+  z-index: 1;
+
+  width: 364px;
+  height: 228px;
+
+  background: url("../img/gym_video-bg@1x.jpg") 0 0 no-repeat;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/gym_video-bg@2x.jpg") 364px 228px;
+    background-size: 364px 228px;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    top: 68.7%;
+    left: calc((100% - 266px) / 2);
+
+    width: 266px;
+    height: 167px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    position: static;
+
+    width: 100%;
+    height: 52vw;
+
+    background-image: url("../img/gym_mobile_video-bg@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.gym__video button {
+  @include button-style-reset;
+  @include center-xy-by-flex-row;
+
+  position: relative;
+
+  width: 72px;
+  height: 72px;
+
+  background: linear-gradient(44.89deg, $blue 25.38%, $crimson 74.89%);
+  border-radius: 50%;
+
+  &::before {
+    @include play-button-triangle(13, 15);
+
+    content: "";
+
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+    width: 17px;
+    height: 17px;
+  }
+
+  &::after {
+    @include play-button-gradient-ring(100, 100);
+
+    content: "";
+
+    position: absolute;
+    top: -14px;
+    left: -14px;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: 52px;
+    height: 52px;
+
+    &::before {
+      @include play-button-triangle(8, 11);
+
+      top: 20px;
+      left: 20px;
+
+      width: 12px;
+      height: 12px;
+    }
+
+    &::after {
+      @include play-button-gradient-ring(73, 73);
+
+      top: -10px;
+      left: -10px;
+    }
+  }
+}
