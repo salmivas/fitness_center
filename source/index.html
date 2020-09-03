@@ -89,8 +89,59 @@
           </div>
         </div>
       </section>
-      <section class="memberships">
-        <h2>Абонементы</h2>
+      <section class="membership">
+        <div class="membership__container">
+          <h2>Абонементы</h2>
+          <ul class="membership__passes">
+            <li class="membership__monthly-pass">
+              <input type="radio" name="options" id="month" checked>
+              <label for="month">1 месяц</label>
+            </li>
+            <li class="membership__semiannually-pass">
+              <input type="radio" name="options" id="semiannual">
+              <label for="semiannual">6 месяцев</label>
+            </li>
+            <li class="membershp__yearly-pass">
+              <input type="radio" name="options" id="annual">
+              <label for="annual">12 месяцев</label>
+            </li>
+          </ul>
+          <ul class="membership__offers">
+            <li class="membership__card membership__card--coach">
+              <h3>С тренером</h3>
+              <p class="membership__options">12 занятий</p>
+              <p class="membership__price">
+                <span data-price="5000">5000</span>
+                <svg width="30" height="42" viewbox="0 0 30 42" role="img">
+                  <use xlink:href="#icon-rouble"></use>
+                </svg>
+              </p>
+              <a href="#" class="membership__purchase-link">Купить абонемент</a>
+            </li>
+            <li class="membership__card membership__card--noontime">
+              <h3>Дневной</h3>
+              <p class="membership__options">с 8:00 до 17:00</p>
+              <p class="membership__price">
+                <span data-price="1700">1700</span>
+                <svg width="30" height="42" viewbox="0 0 30 42" role="img">
+                  <use xlink:href="#icon-rouble"></use>
+                </svg>
+              </p>
+              <a href="#" class="membership__purchase-link">Купить абонемент</a>
+            </li>
+            <li class="membership__card membership__card--day">
+              <h3>Полный день</h3>
+              <p class="membership__options">с 8:00 до 22:00</p>
+              <p class="membership__price">
+                <span data-price="2700">2700</span>
+                <svg width="30" height="42" viewbox="0 0 30 42" role="img">
+                  <use xlink:href="#icon-rouble"></use>
+                </svg>
+              </p>
+              <a href="#" class="membership__purchase-link">Купить абонемент</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="promo">
         <h2 class="visually-hidden">Промоакции</h2>
@@ -121,7 +172,7 @@
             </div>
           </div>
           <div class="promo__image-spreader"></div>
-        </div >
+        </div>
       </section>
     </main>
     <footer class="footer"></footer>
@@ -129,6 +180,7 @@
     <script src="vendor/picturefill.js"></script>
     <script src="vendor/imask.js"></script>
     <script src="paragraph-truncate.js"></script>
+    <script src="membership.js"></script>
     <!-- <script src="js/vendor.js"></script>
     <script src="js/main.js"></script> -->
   </body>

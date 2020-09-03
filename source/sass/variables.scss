@@ -9,11 +9,21 @@ $retina-dpi: 144dpi;
 
 $black: hsl(0, 0%, 28%);
 $white: hsl(0, 0%, 100%);
-$blue: hsl(212, 100%, 26%);
-$denim: hsl(239, 100%, 14%);
-$dark-blue: hsl(221, 68%, 20%);
-$crimson: hsl(347, 100%, 36%);
-$rose: hsl(347, 98%, 47%);
+$porcelain: hsl(225, 40%, 98%); // #F8F9FC
+$snow: hsla(0, 0%, 47%, 0.2); // rgba(120, 120, 120, 0.2)
+$cloud: hsl(0, 0%, 91%); // #E8E8E8
+$aegean: hsl(220, 26%, 39%); //#495A7D
+$stone: hsla(221, 68%, 20%, 0.5); // rgba(16, 38, 84, 0.5);
+$blue: hsl(212, 100%, 26%); // #003E85
+$navy: hsl(224, 83%, 37%); // #103AAE
+$azure: hsl(220, 100%, 36%); //#003EB7
+$denim: hsl(239, 100%, 14%); // #000147
+$dark-blue: hsl(221, 68%, 20%); // #102654
+$crimson: hsl(347, 100%, 36%); // #B80028
+$rose: hsl(347, 98%, 47%); //#ED0235
+$punch: hsl(343, 91%, 43%); // #D10A42
+
+$__: hsl(343, 91%, 43%);
 
 $bebas-neue: "Bebas Neue", "Arial", sans-serif;
 $roboto-condensed: "Roboto Condensed", "Arial", sans-serif;

@@ -1,0 +1,302 @@
+.membership {
+  position: relative;
+
+  height: 851px;
+
+  background-color: $porcelain;
+
+  @media (max-width: $max-tablet-width) {
+    height: 1779px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 1489px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -150px;
+    right: -183px;
+    z-index: 0;
+
+    width: 470px;
+    height: 494px;
+    background-image: url("../img/membership_desktop_plates@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/membership_desktop_plates@2x.png");
+    }
+
+    @media (max-width: $max-tablet-width) {
+      bottom: -125px;
+      right: -76px;
+
+      width: 423px;
+      height: 444px;
+      background-image: url("../img/membership_tablet_plates@1x.png");
+
+      @media (min-resolution: $retina-dpi) {
+        background-image: url("../img/membership_tablet_plates@2x.png");
+      }
+    }
+
+    @media (max-width: $max-mobile-width) {
+      content: none;
+    }
+  }
+}
+
+.membership__container {
+  @include container;
+  @include center-y-by-flex-column;
+
+  padding: 118px 0 0;
+
+  @media (max-width: $max-tablet-width) {
+    padding: 99px 0 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 71px 0 0;
+  }
+}
+
+.membership__container h2 {
+  margin: 0 0 23px;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 15px;
+  }
+}
+
+.membership__passes {
+  @include list-style-reset;
+
+  display: flex;
+  justify-content: center;
+  margin: 0 0 38px;
+
+  border-bottom: 2px solid hsla(0, 0%, 47%, 0.2);
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 44px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 34px;
+  }
+}
+
+.membership__passes li:not(:first-of-type) {
+  margin-left: 47px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 55px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: 45px;
+  }
+}
+
+.membership__passes input {
+  @include input-style-reset;
+  @include visually-hidden;
+
+  &:checked + label {
+    color: $dark-blue;
+
+    &::after {
+      position: absolute;
+
+      content: "";
+      bottom: -2px;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $punch;
+    }
+  }
+}
+
+.membership__passes label {
+  @include font-size-height-color(20, 20, $stone);
+
+  position: relative;
+
+  display: block;
+  padding: 17px 0;
+  box-sizing: border-box;
+
+  @media (max-width: $max-tablet-width) {
+    @include font-size-height-color(18, 18);
+
+    padding: 11px 0 17px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(16, 16);
+  }
+}
+
+.membership__offers {
+  @include list-style-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 65%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+}
+
+.membership__card {
+  @include center-y-by-flex-column;
+
+  z-index: 1;
+
+  box-sizing: border-box;
+  padding: 56px calc(20% - 161px);
+  width: calc(100% / 3 - 2.35%);
+
+  background-color: $white;
+
+  border: 7px solid transparent;
+
+  &:hover {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(111.72deg, $rose, $azure);
+
+    & .membership__purchase-link {
+      color: $white;
+
+      background: linear-gradient(97.05deg, $rose 17.6%, $azure 95.31%);
+      border-image-source: linear-gradient(97.05deg, $rose 17.6%, $azure 95.31%);
+      border-image-slice: 1 2 fill;
+    }
+  }
+
+  @media (max-width: $max-tablet-width) {
+    padding: 56px calc(10% + 67px);
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin: 0 0 40px;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 43px calc(10% + 7px);
+
+    &:not(:last-of-type) {
+      margin: 0 0 35px;
+    }
+  }
+}
+
+.membership__offers h3 {
+  @include font-size-height-color(26, 29);
+
+  margin: 0 0 10px;
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(22, 24);
+  }
+}
+
+.membership__options {
+  @include font-size-height-color(16, 24, $aegean);
+
+  margin: 0 0 65px;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 54px;
+  }
+}
+
+.membership__price {
+  align-self: flex-start;
+  margin: 0 0 35px 9%;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 35px calc(50% - 84px);
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 30px calc(50% - 64px);
+  }
+}
+
+.membership__price span {
+  @include font-size-height-color(60, 90, $navy);
+
+  position: relative;
+  z-index: 1;
+
+  margin-right: 12px;
+
+  font-weight: bold;
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(48, 72);
+
+    margin-right: 6px;
+  }
+
+  &::after {
+    @include font-size-height-color(100, 150, $cloud);
+
+    content: attr(data-price);
+
+    position: absolute;
+    top: -62px;
+    left: -19px;
+    z-index: -1;
+
+    opacity: 0.48;
+
+    @media (max-width: $max-mobile-width) {
+      @include font-size-height-color(80, 120);
+
+      top: -52px;
+      left: -17px;
+    }
+  }
+}
+
+.membership__price svg {
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $max-mobile-width) {
+    width: 24px;
+    height: 33px;
+  }
+}
+
+.membership__purchase-link {
+  @include button-style;
+
+  width: 100%;
+  margin: 0 0 4px;
+  padding: 24px 0;
+
+  color: $dark-blue;
+
+  border: 2px solid $dark-blue;
+}

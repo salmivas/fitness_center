@@ -64,16 +64,15 @@
 }
 
 .promo__headline-wrapper h3 {
+  @include font-size-height-color(90, 90);
+
   margin: 0;
 
   font-family: $bebas-neue;
-  font-size: 90px;
-  line-height: 90px;
   letter-spacing: 0.03em;
 
   @media (max-width: $max-tablet-width) {
-    font-size: 52px;
-    line-height: 52px;
+    @include font-size-height-color(52, 52);
   }
 }
 
@@ -97,18 +96,16 @@
 }
 
 .promo__time-unit {
+  @include font-size-height-color(18, 20);
+
   display: block;
   width: 100%;
   margin: 0 0 8px;
 
-  font-size: 18px;
-  line-height: 20px;
-
   @media (max-width: $max-tablet-width) {
-    margin: 0 0 3px;
+    @include font-size-height-color(12, 14);
 
-    font-size: 12px;
-    line-height: 14px;
+    margin: 0 0 3px;
   }
 }
 
@@ -124,17 +121,16 @@
 }
 
 .promo__day-number {
+  @include font-size-height-color(40, 40);
+
   margin-right: 6px;
 
   font-weight: bold;
-  font-size: 40px;
-  line-height: 40px;
 
   @media (max-width: $max-tablet-width) {
-    margin-right: 4px;
+    @include font-size-height-color(24, 24);
 
-    font-size: 24px;
-    line-height: 24px;
+    margin-right: 4px;
   }
 }
 
@@ -145,42 +141,36 @@
 }
 
 .promo__month-year-wrapper span {
-  font-size: 14px;
-  line-height: 19px;
+  @include font-size-height-color(14, 19);
 
   @media (max-width: $max-tablet-width) {
-    font-size: 10px;
-    line-height: 12px;
+    @include font-size-height-color(10, 12);
   }
 }
 
 .promo__time-block {
+  @include font-size-height-color(40, 50);
+
   display: block;
 
-  font-size: 40px;
-  line-height: 50px;
   font-weight: bold;
 
   border-top: 1px solid $white;
 
   @media (max-width: $max-tablet-width) {
-    font-size: 24px;
-    line-height: 30px;
+    @include font-size-height-color(24, 30);
   }
 }
 
 .promo__event-description {
+  @include font-size-height-color(18, 27, $white);
+
   margin: 0 0 47px;
 
-  font-size: 18px;
-  line-height: 27px;
-  color: $white;
-
   @media (max-width: $max-tablet-width) {
-    margin: 0 0 33px;
+    @include font-size-height-color(12, 18);
 
-    font-size: 12px;
-    line-height: 16px;
+    margin: 0 0 31px;
   }
 }
 
@@ -190,10 +180,9 @@
   padding: 25px 0;
 
   @media (max-width: $max-tablet-width) {
-    padding: 12px;
+    @include font-size-height-color(10, 12);
 
-    font-size: 10px;
-    line-height: 12px;
+    padding: 12px;
 
     border-width: 2px;
   }

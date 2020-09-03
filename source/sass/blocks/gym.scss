@@ -45,10 +45,9 @@
 }
 
 .gym__subtitle {
-  margin: 0 0 40px;
+  @include font-size-height-color(18, 27);
 
-  font-size: 18px;
-  line-height: 27px;
+  margin: 0 0 40px;
 
   @media (max-width: $max-tablet-width) {
     margin: 0 0 36px;
@@ -117,10 +116,10 @@
   width: 364px;
   height: 228px;
 
-  background: url("../img/gym_video-bg@1x.jpg") 0 0 no-repeat;
+  background: url("../img/gym_desktop_video-bg@1x.jpg") 0 0 no-repeat;
 
   @media (min-resolution: $retina-dpi) {
-    background-image: url("../img/gym_video-bg@2x.jpg") 364px 228px;
+    background-image: url("../img/gym_desktop_video-bg@2x.jpg") 364px 228px;
     background-size: 364px 228px;
   }
 
@@ -130,6 +129,8 @@
 
     width: 266px;
     height: 167px;
+
+    background-size: cover;
   }
 
   @media (max-width: $max-mobile-width) {

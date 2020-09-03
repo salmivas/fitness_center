@@ -57,28 +57,25 @@
 }
 
 .intro__city {
+  @include font-size-height-color(49, 49, $white);
+
   margin: 0 0 11px;
 
   font-family: $bebas-neue;
-  font-size: 49px;
-  line-height: 49px;
-  color: $white;
   text-align: right;
   letter-spacing: 0.03em;
 
   @media (max-width: $max-tablet-width) {
-    margin: 0 0 5px;
+    @include font-size-height-color(34, 34);
 
-    font-size: 34px;
-    line-height: 34px;
+    margin: 0 0 5px;
   }
 
   @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(28, 28);
+
     max-width: 291px;
     margin: 0 0 10px;
-
-    font-size: 28px;
-    line-height: 28px;
   }
 }
 
@@ -100,25 +97,23 @@
 }
 
 .intro h1 {
+  @include font-size-height-color(109, 109);
+
   margin: 0;
 
   font-family: $bebas-neue;
   font-weight: bold;
-  font-size: 109px;
-  line-height: 109px;
   letter-spacing: 0.03em;
   text-align: right;
   text-transform: uppercase;
   -webkit-text-stroke: 2px $white;
 
   @media (max-width: $max-tablet-width) {
-    font-size: 86px;
-    line-height: 86px;
+    @include font-size-height-color(86, 86);
   }
 
   @media (max-width: $max-mobile-width) {
-    font-size: 78px;
-    line-height: 78px;
+    @include font-size-height-color(78, 78);
   }
 }
 
@@ -143,8 +138,7 @@
 }
 
 .intro__headline-wrapper li {
-  font-size: 14px;
-  line-height: 21px;
+  @include font-size-height-color(14, 21);
 }
 
 .intro__membership-link {
@@ -165,6 +159,7 @@
 
 .intro__socials {
   @include list-style-reset;
+  @include font-size-height-color(12, 14, $white);
 
   position: absolute;
   right: 0;
@@ -175,9 +170,6 @@
   align-items: center;
 
   font-family: $roboto-condensed;
-  font-size: 12px;
-  line-height: 14px;
-  color: $white;
   text-transform: uppercase;
 
   @media (max-width: $max-tablet-width) {
