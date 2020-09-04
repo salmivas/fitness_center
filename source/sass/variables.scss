@@ -1,10 +1,6 @@
-$mobile-width: 320px;
 $max-mobile-width: 767px;
-$tablet-width: 768px;
 $max-tablet-width: 1199px;
-$desktop-width: 1200px;
 $max-container-width: 1160px;
-$max-desktop-width: 1366px;
 $retina-dpi: 144dpi;
 
 $black: hsl(0, 0%, 28%);
@@ -13,7 +9,9 @@ $porcelain: hsl(225, 40%, 98%); // #F8F9FC
 $snow: hsla(0, 0%, 47%, 0.2); // rgba(120, 120, 120, 0.2)
 $cloud: hsl(0, 0%, 91%); // #E8E8E8
 $aegean: hsl(220, 26%, 39%); //#495A7D
-$stone: hsla(221, 68%, 20%, 0.5); // rgba(16, 38, 84, 0.5);
+$eggplant-50: hsla(221, 68%, 20%, 0.5); // rgba(16, 38, 84, 0.5)
+$eggplant-89: hsla(221, 68%, 20%, 0.89); // rgba(16, 38, 84, 0.89)
+$stone: hsl(221, 18%, 76%); //#B6BDCC
 $blue: hsl(212, 100%, 26%); // #003E85
 $navy: hsl(224, 83%, 37%); // #103AAE
 $azure: hsl(220, 100%, 36%); //#003EB7
@@ -23,7 +21,7 @@ $crimson: hsl(347, 100%, 36%); // #B80028
 $rose: hsl(347, 98%, 47%); //#ED0235
 $punch: hsl(343, 91%, 43%); // #D10A42
 
-$__: hsl(343, 91%, 43%);
+$__: #b7becd;
 
 $bebas-neue: "Bebas Neue", "Arial", sans-serif;
 $roboto-condensed: "Roboto Condensed", "Arial", sans-serif;

@@ -1,12 +1,12 @@
 .promo {
-  padding: 120px 0;
+  padding: 120px 0 117px;
 
   @media (max-width: $max-tablet-width) {
     padding: 100px 0;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 71px 0;
+    padding: 71px 0 70px;
   }
 }
 

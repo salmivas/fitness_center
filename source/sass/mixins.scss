@@ -14,6 +14,15 @@
   overflow: hidden;
 }
 
+@mixin hide-scroll-bar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @mixin container {
   width: calc(100% - 206px);
   max-width: $max-container-width;

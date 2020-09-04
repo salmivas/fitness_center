@@ -3629,6 +3629,14 @@
     var breakpoint = false;
 
     var points = Object.keys(breakpoints).map(function (point) {
+      if (!String.prototype.startsWith) {
+        Object.defineProperty(String.prototype, 'startsWith', {
+            value: function(search, rawPos) {
+                var pos = rawPos > 0 ? rawPos|0 : 0;
+                return this.substring(pos, pos + search.length) === search;
+            }
+        });
+      }
       if (typeof point === 'string' && point.startsWith('@')) {
         var minRatio = parseFloat(point.substr(1));
         var value = win.innerHeight * minRatio;
