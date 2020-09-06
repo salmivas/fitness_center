@@ -22,15 +22,6 @@
   }
 }
 
-.instructors__slider-container {
-  position: relative;
-
-  @media (max-width: $max-tablet-width) {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 .instructors__container h2 {
   margin: 0 0 54px 2px;
 
@@ -42,6 +33,15 @@
 
   @media (max-width: $max-mobile-width) {
     margin: 0 0 44px;
+  }
+}
+
+.instructors__slider-container {
+  position: relative;
+
+  @media (max-width: $max-tablet-width) {
+    display: flex;
+    justify-content: center;
   }
 }
 

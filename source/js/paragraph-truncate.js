@@ -2,6 +2,7 @@
 
 (function () {
   var gymInfoParagraphs = document.querySelectorAll('.gym__info > p');
+  var reviews = document.querySelectorAll('.reviews__review-body');
 
   var ClassName = {
     VISUALLY_HIDDEN: 'visually-hidden',
@@ -16,6 +17,18 @@
   };
 
   var PARAGRAPHS_TO_KEEP = 1;
+  var MAX_TEXT_LENGTH = 165;
+  var TRUNCATION_ENDING = '... <a href="#" class="reviews__review-link">Читать дальше</a>';
+
+  var truncText = function (element, maxLength, truncationEnding) {
+    var totalTextLength = element.innerText.length;
+    var truncatedLength = totalTextLength - maxLength;
+
+    if (totalTextLength > maxLength) {
+      element.innerHTML = element.innerText.substring(0, element.innerText.length - truncatedLength) + (truncatedLength === 0 ? '' : truncationEnding);
+      truncatedLength = 0;
+    }
+  }
 
   if (gymInfoParagraphs) {
     var truncParagraph = function () {
@@ -30,5 +43,12 @@
 
     truncParagraph();
     window.addEventListener('resize', truncParagraph);
+  }
+
+
+  if (reviews) {
+    for (var i = 0; i < reviews.length; i++) {
+      truncText(reviews[i], MAX_TEXT_LENGTH, TRUNCATION_ENDING);
+    }
   }
 })();

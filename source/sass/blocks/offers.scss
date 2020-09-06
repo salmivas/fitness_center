@@ -199,8 +199,15 @@
   @media (max-width: $max-mobile-width) {
     align-items: center;
     width: 100%;
-    margin: 0 0 30px;
     padding: 37px 28px;
+
+    &:not(:nth-of-type(even)) {
+      margin-right: 0;
+    }
+
+    &:not(:last-of-type) {
+      margin: 0 0 30px;
+    }
   }
 }
 
