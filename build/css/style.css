@@ -1408,6 +1408,9 @@ h2 {
 
 .instructors {
   padding: 0 0 119px; }
+  @media (max-width: 1199px) {
+    .instructors {
+      padding: 0 0 100px; } }
 
 .instructors__container {
   width: calc(100% - 206px);
@@ -1635,10 +1638,16 @@ h2 {
     .advantages__container {
       width: calc(100% - 30px);
       max-width: 600px; } }
+  @media (max-width: 1199px) {
+    .advantages__container {
+      padding: 99px 0; } }
 
 .advantages__container h2 {
   margin: 0 0 72px;
   text-align: center; }
+  @media (max-width: 1199px) {
+    .advantages__container h2 {
+      margin: 0 0 51px; } }
 
 .advantages__list {
   margin: 0;
@@ -1650,11 +1659,11 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: calc(60% + 344px);
   margin: 0 auto; }
+  @media (max-width: 1199px) {
+    .advantages__list {
+      width: calc(60% + 271px); } }
 
 .advantages__item {
   display: -webkit-box;
@@ -1665,12 +1674,22 @@ h2 {
           align-items: flex-start;
   width: 50%;
   min-height: 154px; }
+  @media (max-width: 1199px) {
+    .advantages__item {
+      min-height: 234px; } }
+  .advantages__item:nth-of-type(2n + 1) .advantages__statistics {
+    margin-left: 29px; }
+    @media (max-width: 1199px) {
+      .advantages__item:nth-of-type(2n + 1) .advantages__statistics {
+        margin-left: 3px; } }
   .advantages__item:nth-of-type(2n + 2) {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-  .advantages__item:nth-of-type(2n + 1) .advantages__statistics {
-    margin-left: 29px; }
+    @media (max-width: 1199px) {
+      .advantages__item:nth-of-type(2n + 2) .advantages__statistics {
+        margin-left: 16px;
+        margin-right: 21px; } }
   .advantages__item:nth-of-type(4n + 4), .advantages__item:nth-of-type(4n-1) {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -1691,6 +1710,9 @@ h2 {
       width: 100%;
       height: 2px;
       background-color: rgba(209, 10, 66, 0.2); }
+      @media (max-width: 1199px) {
+        .advantages__item:nth-of-type(4n - 7) .advantages__item-wrapper::after, .advantages__item:nth-of-type(4n - 14) .advantages__item-wrapper::after {
+          content: none; } }
 
 .advantages__item-wrapper {
   display: -webkit-box;
@@ -1709,12 +1731,18 @@ h2 {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 33px; }
+  @media (max-width: 1199px) {
+    .advantages__statistics {
+      margin-right: 13px; } }
 
 .advantages__statistics picture {
   line-height: 0; }
 
 .advantages__statistics img {
   margin: 0 0 4px; }
+  @media (max-width: 1199px) {
+    .advantages__statistics img {
+      width: 80%; } }
 
 .advantages__statistics span {
   font-size: 14px;
@@ -1737,6 +1765,11 @@ h2 {
   font-size: 22px;
   line-height: 22px;
   margin: 0 0 12px; }
+  @media (max-width: 1199px) {
+    .advantages__description h3 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 4px; } }
 
 .advantages__description p {
   font-size: 16px;
@@ -1768,9 +1801,19 @@ h2 {
           box-sizing: border-box;
   color: white;
   background-color: #1c3373; }
+  @media (max-width: 1199px) {
+    .advantages__main {
+      top: 50%;
+      bottom: 50%;
+      min-height: 239px;
+      width: calc(50% + 103px);
+      padding: 30px 130px; } }
 
 .advantages__main-statistics {
   margin: 0 0 36px; }
+  @media (max-width: 1199px) {
+    .advantages__main-statistics {
+      margin: 0 0 16px; } }
 
 .advantages__main-statistics p {
   font-size: 74px;
@@ -1778,6 +1821,9 @@ h2 {
   margin: 0 0 11px;
   font-weight: bold;
   text-align: center; }
+  @media (max-width: 1199px) {
+    .advantages__main-statistics p {
+      margin: 0 0 6px; } }
 
 .advantages__main-statistics span {
   font-size: 26px;
@@ -1785,6 +1831,10 @@ h2 {
   color: white;
   font-weight: bold;
   text-align: center; }
+  @media (max-width: 1199px) {
+    .advantages__main-statistics span {
+      font-size: 22px;
+      line-height: 22px; } }
 
 .advantages__main-description {
   margin: 0;

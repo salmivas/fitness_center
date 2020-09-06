@@ -4,6 +4,10 @@
   @media (max-width: $max-tablet-width) {
     padding: 0 0 100px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 0 0 63px;
+  }
 }
 
 .instructors__container {
