@@ -1,0 +1,120 @@
+.offers {
+  padding: 118px 0;
+}
+
+.offers h2 {
+  margin: 0 0 52px;
+
+  text-align: center;
+}
+
+.offers__container {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+  min-height: 462px;
+  height: 1px; // flex-element vertical-stretchining fixer for IE11
+}
+
+.offers__major {
+  display: flex;
+  width: 48.2758%;
+  box-sizing: border-box;
+
+  color: $white;
+  background-color: $rose;
+}
+
+.offer__major-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 42px 45px;
+  box-sizing: border-box;
+}
+
+.offers__major-headline {
+  @include font-size-height-color(28, 28);
+
+  margin: 0 0 21px;
+
+  & span {
+    @include font-size-height-color(70, 70);
+
+    display: block;
+  }
+}
+
+.offers__major-description {
+  @include font-size-height-color(18, 25);
+
+  margin: 0;
+}
+
+.offers__major a {
+  @include font-size-height-color(14, 16, $white);
+  @include text-underline(1, -2, 0, $white);
+
+  position: relative;
+  margin: auto 0 5px;
+
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.offer__major-picture-container {
+  width: 50%;
+
+  background: $azure url("../img/offers_desktop-main@1x.jpg") 0 0 / cover no-repeat;
+}
+
+.offers__minor {
+  @include list-style-reset;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48.2758%;
+  box-sizing: border-box;
+}
+
+.offers__minor li {
+  display: flex;
+  flex-direction: column;
+  height: 45.5%;
+  padding: 25px 28px;
+  box-sizing: border-box;
+
+  border: 7px solid transparent;
+
+  @include gradient-border;
+
+  color: $peacock;
+}
+
+.offers__minor h3 {
+  @include font-size-height-color(26, 26);
+
+  margin: 0 0 7px;
+}
+
+.offers__minor p {
+  margin: 0 0 5px;
+}
+
+.offers__link-wrapper {
+  margin: auto 0 1px;
+}
+
+.offers__minor a {
+  @include font-size-height-color(12, 14, $peacock);
+  @include text-underline(1, -2, 0, $peacock);
+
+  position: relative;
+
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

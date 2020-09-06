@@ -129,3 +129,22 @@
     color: $color;
   }
 }
+
+@mixin text-underline($height, $bottom, $left, $color) {
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: #{$bottom}px;
+    left: #{$left}px;
+
+    width: 100%;
+    height: #{$height}px;
+    background-color: $color;
+  }
+}
+
+@mixin gradient-border {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(111.72deg, $rose, $azure);
+}

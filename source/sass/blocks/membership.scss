@@ -179,8 +179,7 @@
   border: 7px solid transparent;
 
   &:hover {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(111.72deg, $rose, $azure);
+    @include gradient-border;
 
     & .membership__purchase-link {
       color: $white;
