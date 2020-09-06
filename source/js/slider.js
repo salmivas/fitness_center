@@ -60,11 +60,13 @@
           spaceBetween: 40
         },
         767: {
+          initialSlide: 2,
           slidesPerView: 2,
           slidesPerGroup: 2,
           spaceBetween: 30
         },
         320: {
+          initialSlide: 2,
           slidesPerView: 1,
           slidesPerGroup: 1,
           spaceBetween: 10

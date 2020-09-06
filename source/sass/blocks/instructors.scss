@@ -1,5 +1,9 @@
 .instructors {
   padding: 0 0 119px;
+
+  @media (max-width: $max-tablet-width) {
+    padding: 0 0 100px;
+  }
 }
 
 .instructors__container {
