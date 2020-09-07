@@ -33,9 +33,6 @@
 
     background-color: $dark-blue;
   }
-
-  @media (max-width: $max-mobile-width) {
-  }
 }
 
 .contacts__form h2 {
@@ -90,6 +87,8 @@
 
   background-color: $dark-blue;
   border-bottom: 1px solid $pewter;
+
+  @include font-size-height-color(14, 16, $white);
 
   &::placeholder {
     @include font-size-height-color(14, 16, $white);
