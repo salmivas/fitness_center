@@ -1,0 +1,156 @@
+.footer {
+  background-color: $charcoal;
+}
+
+.footer__container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+
+  @media (max-width: $max-tablet-width) {
+    padding: 43px 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    position: relative;
+
+    flex-wrap: wrap;
+    padding: 50px 0 43px;
+  }
+}
+
+.footer__logo {
+  line-height: 0;
+
+  @media (max-width: $max-mobile-width) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+}
+
+.footer__logo svg {
+  @media (max-width: $max-tablet-width) {
+    width: 81px;
+    height: 19px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 68px;
+    height: 15px;
+  }
+}
+
+.footer__navigation {
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    margin: 0 0 14px;
+  }
+}
+
+.footer__navigation ul {
+  @include list-style-reset;
+
+  display: flex;
+  margin-left: 22px;
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+}
+
+.footer__navigation li {
+  &:first-of-type {
+    display: none;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 50%;
+    margin: 0 0 26px;
+
+    &:first-of-type {
+      display: block;
+    }
+
+    &:nth-of-type(even):not(:nth-of-type(2)),
+    &:nth-of-type(5) {
+      & a {
+        margin-left: 14px;
+      }
+    }
+
+    @include flex-child-order-swap(2, 2);
+    @include flex-child-order-swap(4, 1);
+    @include flex-child-order-swap(3, 4);
+    @include flex-child-order-swap(5, 3);
+    @include flex-child-order-swap(6, 5);
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 40px;
+
+    @media (max-width: $max-tablet-width) {
+      margin-right: 30px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer__navigation a {
+  @include font-size-height-color(14, 14, $white);
+
+  display: block;
+}
+
+.footer__socials {
+  @include list-style-reset;
+
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $max-mobile-width) {
+    width: 55%;
+  }
+}
+
+.footer__social-item {
+  @media (max-width: $max-mobile-width) {
+    &--vk svg {
+      width: 32px;
+      height: 17px;
+    }
+
+    &--ig svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--fb svg {
+      width: 14px;
+      height: 27px;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 25px;
+
+    @media (max-width: $max-tablet-width) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-right: 35px;
+    }
+  }
+}
+
+.footer__social-item a {
+  line-height: 0;
+}

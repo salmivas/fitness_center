@@ -148,3 +148,9 @@
   border-image-slice: 1;
   border-image-source: linear-gradient(111.72deg, $rose, $azure);
 }
+
+@mixin flex-child-order-swap($child-number, $order-number) {
+  &:nth-of-type(#{$child-number}) {
+    order: $order-number;
+  }
+}

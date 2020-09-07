@@ -1,0 +1,250 @@
+.contacts {
+  background-image: linear-gradient(to right, $dark-blue 50%, $white 50%);
+  border-top: 1px solid $pewter;
+
+  @media (max-width: $max-tablet-width) {
+    background-image: none;
+    border: none;
+  }
+}
+
+.contacts__container {
+  @include container;
+
+  display: flex;
+  padding: 67px 0 64px;
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.contacts__form {
+  width: 50%;
+
+  color: $white;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    padding: 69px 0 70px;
+
+    background-color: $dark-blue;
+  }
+
+  @media (max-width: $max-mobile-width) {
+  }
+}
+
+.contacts__form h2 {
+  margin: 0 0 38px;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 30px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 32px;
+  }
+}
+
+.contacts__form-wrapper {
+  width: calc(50% + 121px);
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: calc(10% + 260px);
+  }
+}
+
+.contacts__form form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $max-tablet-width) {
+    max-width: 94%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 100%;
+  }
+}
+
+.contacts__form label {
+  @include visually-hidden;
+}
+
+.contacts__form input {
+  @include input-style-reset;
+
+  flex-grow: 1;
+  width: 40%;
+  margin: 0 0 28px;
+
+  padding: 6px 0;
+
+  background-color: $dark-blue;
+  border-bottom: 1px solid $pewter;
+
+  &::placeholder {
+    @include font-size-height-color(14, 16, $white);
+  }
+
+  &::-ms-input-placeholder {
+    @include font-size-height-color(14, 16, $white);
+  }
+
+  &:nth-of-type(odd) {
+    margin-right: 30px;
+
+    @media (max-width: $max-tablet-width) {
+      margin-right: 60px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+.contacts__form button {
+  @include button-style;
+  @include font-size-height-color(14, 16);
+
+  width: 100%;
+  padding: 16px 0;
+
+  border-width: 3px;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 11px 0 0;
+  }
+}
+
+.contacts__info {
+  width: 50%;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    padding: 69px 0 64px;
+  }
+}
+
+.contacts__info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(50% + 167px);
+  margin: 0 0 0 auto;
+
+  @media (max-width: $max-tablet-width) {
+    width: calc(50% + 121px);
+    margin: 0 auto;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: calc(100% - 30px);
+    max-width: 600px;
+  }
+}
+
+.contacts__info h2 {
+  width: 100%;
+  margin: 0 0 42px;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 36px;
+  }
+}
+
+.contacts__info h3 {
+  @include font-size-height-color(16, 24);
+  margin: 0 0 3px;
+
+  @media (max-width: $max-tablet-width) {
+    @include font-size-height-color(20, 24);
+
+    margin: 0 0 8px;
+  }
+}
+
+.contacts__info-text-block {
+  width: 50.8%;
+  box-sizing: border-box;
+
+  border-right: 1px solid $pewter;
+
+  @media (max-width: $max-tablet-width) {
+    width: 53.2%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    margin: 0 0 26px;
+
+    border: none;
+  }
+}
+
+.contacts__info-links-block {
+  width: 49.2%;
+  padding-left: 13%;
+  box-sizing: border-box;
+
+  @media (max-width: $max-tablet-width) {
+    width: 46.8%;
+    padding-left: 9.3%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.contacts__info-block {
+  &:not(:first-of-type) {
+    margin: 18px 0 0;
+
+    @media (max-width: $max-tablet-width) {
+      margin: 23px 0 0;
+    }
+  }
+}
+
+.contacts__info-block address {
+  @include font-size-height-color(14, 21);
+
+  font-style: normal;
+
+  @media (max-width: $max-tablet-width) {
+    @include font-size-height-color(18, 27);
+  }
+}
+
+.contacts__info-block p {
+  @include font-size-height-color(14, 21);
+
+  margin: 0;
+
+  @media (max-width: $max-tablet-width) {
+    @include font-size-height-color(18, 27);
+  }
+}
+
+.contacts__info-block a {
+  @include font-size-height-color(14, 21);
+
+  display: block;
+
+  color: $dark-blue;
+
+  @media (max-width: $max-tablet-width) {
+    @include font-size-height-color(18, 27);
+  }
+}

@@ -563,8 +563,100 @@
           </div>
         </div>
       </section>
+      <div class="contacts">
+        <div class="contacts__container">
+          <section class="contacts__form">
+            <div class="contacts__form-wrapper">
+              <h2>Бесплатное занятие</h2>
+              <form action="#" method="post" autocomplete="off">
+                <label for="user-name">Имя</label>
+                <input id="user-name" type="text" name="name" placeholder="Имя" required="">
+                <label for="user-phone">Телефон</label>
+                <input id="user-phone" type="tel" name="phone" placeholder="Телефон" pattern=".{18,}" required="">
+                <button type="submit">Отправить</button>
+              </form>
+            </div>
+          </section>
+          <section class="contacts__info">
+            <div class="contacts__info-wrapper">
+              <h2>Контакты</h2>
+              <div class="contacts__info-text-block">
+                <div class="contacts__info-block contacts__info-block--adress">
+                  <h3>Адрес:</h3>
+                  <address>г. Омск, ул. 60 лет Октября, 7</address>
+                </div>
+                <div class="contacts__info-block contacts__info-block--schedule">
+                  <h3>График работы:</h3>
+                  <p>Пн-Вс: с 8:00 до 22:00</p>
+                </div>
+              </div>
+              <div class="contacts__info-links-block">
+                <div class="contacts__info-block contacts__info-block--phone">
+                  <h3>Телефон:</h3>
+                  <a href="tel:+78005555555">8-800-555-55-55</a>
+                </div>
+                <div class="contacts__info-block contacts__info-block--email">
+                  <h3>Email:</h3>
+                  <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <a class="footer__logo">
+          <svg width="87" height="20" viewbox="0 0 87 20" role="img">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <nav class="footer__navigation">
+          <ul>
+            <li></li>
+            <li>
+              <a href="#">Услуги</a>
+            </li>
+            <li>
+              <a href="#">Абонементы</a>
+            </li>
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Тренеры</a>
+            </li>
+            <li>
+              <a href="#">Расписание</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__socials">
+          <li class="footer__social-item footer__social-item--vk">
+            <a href="#" title="Vkontakte">
+              <svg width="24" height="13" viewbox="0 0 24 13" role="img">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item footer__social-item--ig">
+            <a href="#" title="Instagram">
+              <svg width="24" height="24" viewbox="0 0 24 24" role="img">
+                <use xlink:href="#icon-ig"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item footer__social-item--fb">
+            <a href="#" title="Facebook">
+              <svg width="12" height="24" viewbox="0 0 12 24" role="img">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script src="vendor/picturefill.js"></script>
     <script src="vendor/swiper.js"></script>
     <script src="vendor/imask.js"></script>
