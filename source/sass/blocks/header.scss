@@ -45,5 +45,7 @@
 }
 
 .header__contacts a {
+  @include on-hover;
+
   color: $white;
 }

@@ -143,6 +143,8 @@
 
 .intro__membership-link {
   @include button-style;
+  @include on-hover;
+  @include on-focus;
 
   box-sizing: border-box;
   width: 232px;
@@ -177,6 +179,14 @@
   }
 }
 
-.intro__socials li:not(:last-of-type) {
-  margin: 0 0 19px;
+.intro__socials li {
+  &:not(:last-of-type) {
+    margin: 0 0 19px;
+  }
+}
+
+.intro__socials a {
+  @include on-hover;
+
+  color: $white;
 }

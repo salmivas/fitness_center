@@ -1,12 +1,19 @@
 $max-mobile-width: 767px;
 $max-tablet-width: 1199px;
 $max-container-width: 1160px;
+$desktop-width: 1200px;
 $retina-dpi: 144dpi;
 
 $charcoal: hsl(222, 79%, 6%); //#030A1A
 $white: hsl(0, 0%, 100%);
 $porcelain: hsl(225, 40%, 98%); // #F8F9FC
-$snow: hsla(0, 0%, 47%, 0.2); // rgba(120, 120, 120, 0.2)
+$snow-02: hsla(0, 0%, 47%, 0.02);
+$snow-05: hsla(0, 0%, 47%, 0.05);
+$snow-07: hsla(0, 0%, 47%, 0.07);
+$snow-10: hsla(0, 0%, 47%, 0.1);
+$snow-20: hsla(0, 0%, 47%, 0.2);
+$snow-30: hsla(0, 0%, 47%, 0.3);
+$snow-40: hsla(0, 0%, 47%, 0.4);
 $cloud: hsl(0, 0%, 91%); // #E8E8E8
 $aegean: hsl(220, 26%, 39%); // #495A7D
 $eggplant-50: hsla(221, 68%, 20%, 0.5); // rgba(16, 38, 84, 0.5)

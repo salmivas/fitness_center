@@ -50,11 +50,11 @@
                 <li>Кардио зона</li>
               </ul>
             </div>
-            <a href="" class="intro__membership-link">Купить абонемент</a>
+            <a href="#membership" class="intro__membership-link">Купить абонемент</a>
             <ul class="intro__socials">
-              <li><a href="#"></a>fb</li>
-              <li><a href="#"></a>vk</li>
-              <li><a href="#"></a>ig</li>
+              <li><a href="#">fb</a></li>
+              <li><a href="#">vk</a></li>
+              <li><a href="#">ig</a></li>
             </ul>
           </div>
         </div>
@@ -65,6 +65,7 @@
             <h2>Тренажерный зал</h2>
             <p class="gym__subtitle">Просторный зал площадью 900 кв/м</p>
             <article class="gym__info">
+              <h3 class="visually-hidden">О тренажёрном зале Sypergym</h3>
               <p>
                 Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
               </p>
@@ -95,21 +96,21 @@
           </div>
         </div>
       </section>
-      <section class="membership">
+      <section id="membership" class="membership">
         <div class="membership__container">
           <h2>Абонементы</h2>
           <ul class="membership__passes">
             <li class="membership__monthly-pass">
-              <input type="radio" name="options" id="month" checked="">
-              <label for="month">1 месяц</label>
+              <input type="radio" name="options" id="month" tabindex="-1" checked="">
+              <label for="month" tabindex="0">1 месяц</label>
             </li>
             <li class="membership__semiannually-pass">
-              <input type="radio" name="options" id="semiannual">
-              <label for="semiannual">6 месяцев</label>
+              <input type="radio" name="options" id="semiannual" tabindex="-1">
+              <label for="semiannual" tabindex="0">6 месяцев</label>
             </li>
-            <li class="membershp__yearly-pass">
-              <input type="radio" name="options" id="annual">
-              <label for="annual">12 месяцев</label>
+            <li class="membership__yearly-pass">
+              <input type="radio" name="options" id="annual" tabindex="-1">
+              <label for="annual" tabindex="0">12 месяцев</label>
             </li>
           </ul>
           <ul class="membership__offers">
@@ -197,7 +198,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Анна Павлова</p>
                       <p class="instructors__instructor-sphere">Dolore</p>
                       <ul class="instructors__instructor-advantages">
@@ -219,7 +220,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Алексей Лавров</p>
                       <p class="instructors__instructor-sphere">Commodo</p>
                       <ul class="instructors__instructor-advantages">
@@ -245,7 +246,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Александр Пашков</p>
                       <p class="instructors__instructor-sphere">CrossFit</p>
                       <ul class="instructors__instructor-advantages">
@@ -271,7 +272,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Мария Кетова</p>
                       <p class="instructors__instructor-sphere">Enim esse</p>
                       <ul class="instructors__instructor-advantages">
@@ -293,7 +294,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Aute Aliqua</p>
                       <p class="instructors__instructor-sphere">Lorem ea non</p>
                       <ul class="instructors__instructor-advantages">
@@ -315,7 +316,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Fugiat Officia</p>
                       <p class="instructors__instructor-sphere">CrossFit</p>
                       <ul class="instructors__instructor-advantages">
@@ -337,7 +338,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Exercitation Consequat</p>
                       <p class="instructors__instructor-sphere">Elit aliquip</p>
                       <ul class="instructors__instructor-advantages">
@@ -359,7 +360,7 @@
                     </picture>
                   </div>
                   <div class="instructors__instructor-info">
-                    <div class="instrusctors__instructor-wrapper">
+                    <div class="instructors__instructor-wrapper">
                       <p class="instructors__instructor-name">Eos Animi</p>
                       <p class="instructors__instructor-sphere">CrossFit</p>
                       <ul class="instructors__instructor-advantages">
@@ -475,7 +476,7 @@
         <h2>Акции</h2>
         <div class="offers__container">
           <div class="offers__major">
-            <div class="offer__major-text-container">
+            <div class="offers__major-text-container">
               <h3 class="offers__major-headline">
                 Год
                 <span>4999</span>
@@ -485,7 +486,7 @@
                 <a href="#">подробнее</a>
               </div>
             </div>
-            <div class="offer__major-picture-container"></div>
+            <div class="offers__major-picture-container"></div>
           </div>
           <ul class="offers__minor">
             <li>
@@ -663,16 +664,8 @@
         </ul>
       </div>
     </footer>
-    <script src="vendor/picturefill.js"></script>
-    <script src="vendor/swiper.js"></script>
-    <script src="vendor/imask.js"></script>
-    <script src="debounce.js"></script>
-    <script src="paragraph-truncate.js"></script>
-    <script src="membership.js"></script>
-    <script src="slider.js"></script>
-    <script src="mask.js"></script>
-    <!-- <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script> -->
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 
 </html>

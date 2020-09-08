@@ -133,6 +133,8 @@
 
 .reviews__button {
   @include button-style-reset;
+  @include on-hover;
+  @include on-focus;
 
   position: absolute;
   top: calc((100% - 32px) / 2);
@@ -156,6 +158,10 @@
       right: 0;
     }
   }
+}
+
+.reviews__button span {
+  width: 0;
 }
 
 .reviews__button svg {

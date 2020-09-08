@@ -176,6 +176,8 @@
 
 .promo__fill-request-link {
   @include button-style;
+  @include on-hover;
+  @include on-focus;
 
   padding: 25px 0;
 

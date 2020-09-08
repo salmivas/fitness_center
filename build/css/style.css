@@ -478,6 +478,12 @@ h2 {
 
 .header__contacts a {
   color: white; }
+  @media (min-width: 1200px) {
+    .header__contacts a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
 
 .intro {
   background: radial-gradient(circle at left bottom, #003e85 15%, #b80028 50%);
@@ -632,6 +638,15 @@ h2 {
           box-sizing: border-box;
   width: 232px;
   margin-left: auto; }
+  @media (min-width: 1200px) {
+    .intro__membership-link:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
+  @media (min-width: 1200px) {
+    .intro__membership-link:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
   @media (max-width: 1199px) {
     .intro__membership-link {
       width: 185px; } }
@@ -677,6 +692,15 @@ h2 {
 
 .intro__socials li:not(:last-of-type) {
   margin: 0 0 19px; }
+
+.intro__socials a {
+  color: white; }
+  @media (min-width: 1200px) {
+    .intro__socials a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
 
 .gym__container {
   width: calc(100% - 206px);
@@ -859,6 +883,15 @@ h2 {
   height: 72px;
   background: linear-gradient(44.89deg, #003e85 25.38%, #b80028 74.89%);
   border-radius: 50%; }
+  @media (min-width: 1200px) {
+    .gym__video button:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
+  @media (min-width: 1200px) {
+    .gym__video button:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
   .gym__video button::before {
     background: url("data:image/svg+xml,%3Csvg width='13' height='15' viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 7.5L0.249999 14.8612L0.25 0.138783L13 7.5Z' fill='white'/%3E%3C/svg%3E%0A") 4px 1px no-repeat;
     content: "";
@@ -1030,6 +1063,12 @@ h2 {
   padding: 17px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  @media (min-width: 1200px) {
+    .membership__passes label:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
   @media (max-width: 1199px) {
     .membership__passes label {
       font-size: 18px;
@@ -1205,6 +1244,15 @@ h2 {
   padding: 24px 0;
   color: #102656;
   border: 2px solid #102656; }
+  @media (min-width: 1200px) {
+    .membership__purchase-link:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
+  @media (min-width: 1200px) {
+    .membership__purchase-link:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
 
 .promo {
   padding: 120px 0 117px; }
@@ -1395,6 +1443,15 @@ h2 {
   color: white;
   border: 4px solid white;
   padding: 25px 0; }
+  @media (min-width: 1200px) {
+    .promo__fill-request-link:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
+  @media (min-width: 1200px) {
+    .promo__fill-request-link:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
   @media (max-width: 1199px) {
     .promo__fill-request-link {
       font-size: 10px;
@@ -1607,6 +1664,15 @@ h2 {
   cursor: pointer;
   position: absolute;
   top: calc((100% - 39px) / 2); }
+  @media (min-width: 1200px) {
+    .instructors__button:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
+  @media (min-width: 1200px) {
+    .instructors__button:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
   @media (max-width: 767px) {
     .instructors__button {
       top: calc((100% - 19px) / 2); } }
@@ -1620,6 +1686,9 @@ h2 {
     @media (max-width: 1199px) {
       .instructors__button--next {
         right: 0; } }
+
+.instructors__button span {
+  width: 0; }
 
 @media (max-width: 767px) {
   .instructors__button svg {
@@ -2079,6 +2148,12 @@ h2 {
     width: 100%;
     height: 1px;
     background-color: white; }
+  @media (min-width: 1200px) {
+    .offers__major a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
 
 .offers__minor {
   margin: 0;
@@ -2179,6 +2254,12 @@ h2 {
     width: 100%;
     height: 1px;
     background-color: #1c3373; }
+  @media (min-width: 1200px) {
+    .offers__minor a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
 
 .reviews {
   padding: 0 0 122px; }
@@ -2439,6 +2520,9 @@ h2 {
   padding: 0;
   background-color: white;
   border: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -2449,6 +2533,17 @@ h2 {
   border-bottom: 1px solid #73809c; }
   .contacts__form input:focus {
     outline: none; }
+  @media (min-width: 1200px) {
+    .contacts__form input:hover {
+      -webkit-box-shadow: 0 28px 25px rgba(120, 120, 120, 0.2);
+              box-shadow: 0 28px 25px rgba(120, 120, 120, 0.2);
+      -webkit-transition: -webkit-box-shadow 0.3s ease-out;
+      transition: -webkit-box-shadow 0.3s ease-out;
+      transition: box-shadow 0.3s ease-out;
+      transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out; }
+    .contacts__form input:focus {
+      -webkit-box-shadow: 0 28px 25px rgba(120, 120, 120, 0.3);
+              box-shadow: 0 28px 25px rgba(120, 120, 120, 0.3); } }
   .contacts__form input::-webkit-input-placeholder {
     font-size: 14px;
     line-height: 16px;

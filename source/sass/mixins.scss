@@ -154,3 +154,32 @@
     order: $order-number;
   }
 }
+
+@mixin shadow-on-hover {
+  box-shadow: 0 28px 25px $snow-20;
+
+  transition: box-shadow 0.3s ease-out;
+}
+
+@mixin shadow-on-focus {
+  box-shadow: 0 28px 25px $snow-30;
+}
+
+@mixin on-hover {
+  @media (min-width: $desktop-width) {
+    &:hover {
+      cursor: pointer;
+
+      opacity: 0.6;
+      transition: opacity 0.3s ease-out;
+    }
+  }
+}
+
+@mixin on-focus {
+  @media (min-width: $desktop-width) {
+    &:focus {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
+}

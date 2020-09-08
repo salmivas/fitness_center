@@ -78,6 +78,7 @@
 
 .contacts__form input {
   @include input-style-reset;
+  @include font-size-height-color(14, 16, $white);
 
   flex-grow: 1;
   width: 40%;
@@ -88,7 +89,15 @@
   background-color: $dark-blue;
   border-bottom: 1px solid $pewter;
 
-  @include font-size-height-color(14, 16, $white);
+  @media (min-width: $desktop-width) {
+    &:hover {
+      @include shadow-on-hover;
+    }
+
+    &:focus {
+      @include shadow-on-focus;
+    }
+  }
 
   &::placeholder {
     @include font-size-height-color(14, 16, $white);
@@ -115,6 +124,8 @@
 .contacts__form button {
   @include button-style;
   @include font-size-height-color(14, 16);
+  @include on-focus;
+  @include on-hover;
 
   width: 100%;
   padding: 16px 0;
@@ -238,6 +249,7 @@
 
 .contacts__info-block a {
   @include font-size-height-color(14, 21);
+  @include on-hover;
 
   display: block;
 

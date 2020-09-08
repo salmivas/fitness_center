@@ -146,6 +146,8 @@
 
 .gym__video button {
   @include button-style-reset;
+  @include on-hover;
+  @include on-focus;
   @include center-xy-by-flex-row;
 
   position: relative;

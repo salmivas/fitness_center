@@ -18,7 +18,7 @@
 
   var PARAGRAPHS_TO_KEEP = 1;
   var MAX_TEXT_LENGTH = 165;
-  var TRUNCATION_ENDING = '... <a href="#" class="reviews__review-link">Читать дальше</a>';
+  var TRUNCATION_ENDING = '... <a href="#" class="reviews__review-link" tabindex="-1">Читать дальше</a>';
 
   var truncText = function (element, maxLength, truncationEnding) {
     var totalTextLength = element.innerText.length;

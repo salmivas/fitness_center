@@ -105,6 +105,7 @@
 
 .footer__navigation a {
   @include font-size-height-color(14, 14, $white);
+  @include on-hover;
 
   display: block;
 }
@@ -152,5 +153,7 @@
 }
 
 .footer__social-item a {
+  @include on-hover;
+
   line-height: 0;
 }

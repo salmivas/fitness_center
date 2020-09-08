@@ -127,6 +127,7 @@
 
 .membership__passes label {
   @include font-size-height-color(20, 20, $eggplant-50);
+  @include on-hover;
 
   position: relative;
 
@@ -290,6 +291,8 @@
 
 .membership__purchase-link {
   @include button-style;
+  @include on-hover;
+  @include on-focus;
 
   width: 100%;
   margin: 0 0 4px;

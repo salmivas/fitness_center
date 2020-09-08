@@ -64,7 +64,7 @@
   }
 }
 
-.offer__major-text-container {
+.offers__major-text-container {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -82,7 +82,7 @@
   }
 }
 
-.offer__major-picture-container {
+.offers__major-picture-container {
   width: 50%;
 
   background: $azure url("../img/offers_desktop-main@1x.jpg") 0 0 / cover no-repeat;
@@ -144,6 +144,7 @@
 .offers__major a {
   @include font-size-height-color(14, 16, $white);
   @include text-underline(1, -2, 0, $white);
+  @include on-hover;
 
   position: relative;
   margin: auto 0 5px;
@@ -232,6 +233,7 @@
 .offers__minor a {
   @include font-size-height-color(12, 14, $peacock);
   @include text-underline(1, -2, 0, $peacock);
+  @include on-hover;
 
   position: relative;
 

@@ -156,7 +156,7 @@
   }
 }
 
-.instrusctors__instructor-wrapper {
+.instructors__instructor-wrapper {
   @include hide-scroll-bar;
 
   width: 100%;
@@ -203,6 +203,8 @@
 
 .instructors__button {
   @include button-style-reset;
+  @include on-hover;
+  @include on-focus;
 
   position: absolute;
   top: calc((100% - 39px) / 2);
@@ -226,6 +228,10 @@
       right: 0;
     }
   }
+}
+
+.instructors__button span {
+  width: 0;
 }
 
 .instructors__button svg {
