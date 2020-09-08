@@ -50,6 +50,8 @@
   };
 
 
+  var reviews = document.querySelector('.reviews');
+  var instructors = document.querySelector('.instructors');
   var instructorsSlider = document.querySelector(SliderClass.Instructors.Container.SELECTOR)
   var instructorsSliderList = document.querySelector(SliderClass.Instructors.Wrapper.SELECTOR);
   var instructorsSliderButtons = document.querySelector(SliderClass.Instructors.Navigation.SLIDER_BUTTONS);
@@ -120,9 +122,14 @@
     reviewsSliderSwiper.init();
   }
 
-  var onResize = window.debounce(runInstructorsSliderSwiper);
+  if (reviews) {
+    runReviewsSliderSwiper();
+  }
 
-  runInstructorsSliderSwiper();
-  runReviewsSliderSwiper();
-  window.addEventListener('resize', onResize);
+  if (instructors) {
+    var onResize = window.debounce(runInstructorsSliderSwiper);
+
+    runInstructorsSliderSwiper();
+    window.addEventListener('resize', onResize);
+  }
 })();

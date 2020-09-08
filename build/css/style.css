@@ -1615,13 +1615,13 @@ h2 {
     .instructors__instructor-info {
       padding: 20% calc(20% - 22px); } }
 
-.instrusctors__instructor-wrapper {
+.instructors__instructor-wrapper {
   scrollbar-width: none;
   -ms-overflow-style: none;
   width: 100%;
   height: 100%;
   overflow-y: scroll; }
-  .instrusctors__instructor-wrapper::-webkit-scrollbar {
+  .instructors__instructor-wrapper::-webkit-scrollbar {
     display: none; }
 
 .instructors__instructor-sphere {
@@ -2065,7 +2065,7 @@ h2 {
               flex-direction: column;
       min-height: auto; } }
 
-.offer__major-text-container {
+.offers__major-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2078,34 +2078,34 @@ h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
   @media (max-width: 1199px) {
-    .offer__major-text-container {
+    .offers__major-text-container {
       width: 41.15%; } }
   @media (max-width: 767px) {
-    .offer__major-text-container {
+    .offers__major-text-container {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
       width: 100%;
       min-height: 299px; } }
 
-.offer__major-picture-container {
+.offers__major-picture-container {
   width: 50%;
   background: #003db8 url("../img/offers_desktop-main@1x.jpg") 0 0/cover no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .offer__major-picture-container {
+    .offers__major-picture-container {
       background-image: url("../img/offers_desktop-main@2x.jpg"); } }
   @media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px) {
-    .offer__major-picture-container {
+    .offers__major-picture-container {
       background-image: url("../img/offers_tablet-main@2x.jpg"); } }
   @media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px) {
-    .offer__major-picture-container {
+    .offers__major-picture-container {
       background-image: url("../img/offers_mobile-main@2x.jpg"); } }
   @media (max-width: 1199px) {
-    .offer__major-picture-container {
+    .offers__major-picture-container {
       width: 58.84%;
       background-image: url("../img/offers_tablet-main@1x.jpg"); } }
   @media (max-width: 767px) {
-    .offer__major-picture-container {
+    .offers__major-picture-container {
       min-height: 299px;
       width: 100%;
       background-image: url("../img/offers_mobile-main@1x.jpg"); } }
@@ -2395,6 +2395,15 @@ h2 {
   cursor: pointer;
   position: absolute;
   top: calc((100% - 32px) / 2); }
+  @media (min-width: 1200px) {
+    .reviews__button:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
+  @media (min-width: 1200px) {
+    .reviews__button:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
   @media (max-width: 767px) {
     .reviews__button {
       top: calc((100% - 19px) / 2); } }
@@ -2408,6 +2417,9 @@ h2 {
     @media (max-width: 1199px) {
       .reviews__button--next {
         right: 0; } }
+
+.reviews__button span {
+  width: 0; }
 
 @media (max-width: 767px) {
   .reviews__button svg {
@@ -2608,6 +2620,15 @@ h2 {
   width: 100%;
   padding: 16px 0;
   border-width: 3px; }
+  @media (min-width: 1200px) {
+    .contacts__form button:focus {
+      outline: -webkit-focus-ring-color auto 1px; } }
+  @media (min-width: 1200px) {
+    .contacts__form button:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
   @media (max-width: 767px) {
     .contacts__form button {
       margin: 11px 0 0; } }
@@ -2710,6 +2731,12 @@ h2 {
   line-height: 21px;
   display: block;
   color: #102656; }
+  @media (min-width: 1200px) {
+    .contacts__info-block a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
   @media (max-width: 1199px) {
     .contacts__info-block a {
       font-size: 18px;
@@ -2832,6 +2859,12 @@ h2 {
   line-height: 14px;
   color: white;
   display: block; }
+  @media (min-width: 1200px) {
+    .footer__navigation a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }
 
 .footer__socials {
   margin: 0;
@@ -2869,3 +2902,9 @@ h2 {
 
 .footer__social-item a {
   line-height: 0; }
+  @media (min-width: 1200px) {
+    .footer__social-item a:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; } }

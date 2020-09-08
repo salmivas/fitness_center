@@ -1,10 +1,7 @@
 'use strict';
 
 (function () {
-  var membershipPasses = document.querySelectorAll('.membership__passes input');
-  var membershipCardCoachValue = document.querySelector('.membership__card--coach .membership__price span');
-  var membershipCardNoontimeValue = document.querySelector('.membership__card--noontime .membership__price span');
-  var membershipCardDayValue = document.querySelector('.membership__card--day .membership__price span');
+  var membership = document.querySelector('.membership');
 
   var Price = {
     Month: {
@@ -24,32 +21,66 @@
     },
   };
 
-  var capitalize = function (str) {
-    if (typeof str !== 'string') {
-      return '';
-    }
+  if (membership) {
+    var membershipButtons = document.querySelectorAll('.membership__passes-input');
+    var CHECKED = "membership__passes-input--checked";
+    var membershipCardCoachValue = document.querySelector('.membership__card--coach .membership__price span');
+    var membershipCardNoontimeValue = document.querySelector('.membership__card--noontime .membership__price span');
+    var membershipCardDayValue = document.querySelector('.membership__card--day .membership__price span');
 
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
+    var forEach = function (array, callback, scope) {
+      for (var i = 0; i < array.length; i++) {
+        callback.call(scope, array[i], i);
+      }
+    };
 
-  var setPrice = function (elementToSet, costToset) {
-    if (elementToSet) {
-      elementToSet.innerText = costToset;
-      elementToSet.dataset.price = costToset;
-    }
-  };
+    var setPrice = function (elementToSet, costToset) {
+      if (elementToSet) {
+        elementToSet.innerText = costToset;
+        elementToSet.dataset.price = costToset;
+      }
+    };
 
-  var setCurrnetPrice = function (key) {
-    setPrice(membershipCardCoachValue, Price[capitalize(key)].COACH);
-    setPrice(membershipCardNoontimeValue, Price[capitalize(key)].NOONTIME);
-    setPrice(membershipCardDayValue, Price[capitalize(key)].FULL_DAY);
-  };
+    var setCurrnetPrice = function (rate) {
+      setPrice(membershipCardCoachValue, rate.COACH);
+      setPrice(membershipCardNoontimeValue, rate.NOONTIME);
+      setPrice(membershipCardDayValue, rate.FULL_DAY);
+    };
 
-  if (membershipPasses) {
-    for (var i = 0; i < membershipPasses.length; i++) {
-      membershipPasses[i].addEventListener('click', function (evt) {
-        setCurrnetPrice(evt.target.id);
-      });
-    }
+    var toggleButton = function (elementToCheck) {
+      elementToCheck.classList.toggle(CHECKED);
+    };
+
+    var uncheckAll = function (elements) {
+      forEach(elements, function (element) {
+        element.classList.remove(CHECKED);
+      })
+    };
+
+    var togglersInit = function () {
+      forEach(membershipButtons, function (button) {
+        button.addEventListener('click', function () {
+          uncheckAll(membershipButtons);
+          toggleButton(button);
+          console.dir(this);
+          switch (true) {
+            case this.innerText === '1 месяц':
+              setCurrnetPrice(Price.Month)
+              break;
+            case this.innerText === '6 месяцев':
+              setCurrnetPrice(Price.Semiannual)
+              break;
+            case this.innerText === '12 месяцев':
+              setCurrnetPrice(Price.Annual)
+              break;
+            default:
+              break;
+          }
+        });
+      });;
+    };
+
+    togglersInit();
   }
 })();
+

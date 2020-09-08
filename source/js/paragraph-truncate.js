@@ -39,10 +39,10 @@
           gymInfoParagraphs[i].classList.remove(ClassName.VISUALLY_HIDDEN);
         }
       }
-    };
 
-    truncParagraph();
-    window.addEventListener('resize', truncParagraph);
+      truncParagraph();
+      window.addEventListener('resize', truncParagraph);
+    };
   }
 
 
