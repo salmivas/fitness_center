@@ -1,3 +1,4 @@
+/* global Swiper*/
 'use strict';
 
 (function () {
@@ -52,10 +53,10 @@
 
   var reviews = document.querySelector('.reviews');
   var instructors = document.querySelector('.instructors');
-  var instructorsSlider = document.querySelector(SliderClass.Instructors.Container.SELECTOR)
+  var instructorsSlider = document.querySelector(SliderClass.Instructors.Container.SELECTOR);
   var instructorsSliderList = document.querySelector(SliderClass.Instructors.Wrapper.SELECTOR);
   var instructorsSliderButtons = document.querySelector(SliderClass.Instructors.Navigation.SLIDER_BUTTONS);
-  var reviewsSlider = document.querySelector(SliderClass.Reviews.Container.SELECTOR)
+  var reviewsSlider = document.querySelector(SliderClass.Reviews.Container.SELECTOR);
   var reviewsSliderList = document.querySelector(SliderClass.Reviews.Wrapper.SELECTOR);
   var reviewsSliderButtons = document.querySelector(SliderClass.Reviews.Navigation.SLIDER_BUTTONS);
 
@@ -99,7 +100,7 @@
       }
     });
     instructorsSliderSwiper.init();
-  }
+  };
 
   var runReviewsSliderSwiper = function () {
     if (!reviewsSlider.classList.contains(SliderClass.Common.CONTAINER_INITIALIZED)) {
@@ -120,7 +121,7 @@
       },
     });
     reviewsSliderSwiper.init();
-  }
+  };
 
   if (reviews) {
     runReviewsSliderSwiper();

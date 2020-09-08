@@ -1026,35 +1026,7 @@ h2 {
     .membership__passes li:not(:first-of-type) {
       margin-left: 45px; } }
 
-.membership__passes input {
-  padding: 0;
-  background-color: white;
-  border: none;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
-  .membership__passes input:focus {
-    outline: none; }
-  .membership__passes input:checked + label {
-    color: #102656; }
-    .membership__passes input:checked + label::after {
-      position: absolute;
-      content: "";
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #d10a42; }
-
-.membership__passes label {
+.membership__passes-input {
   font-size: 20px;
   line-height: 20px;
   color: rgba(16, 38, 86, 0.5);
@@ -1064,20 +1036,30 @@ h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
   @media (min-width: 1200px) {
-    .membership__passes label:hover {
+    .membership__passes-input:hover {
       cursor: pointer;
       opacity: 0.6;
       -webkit-transition: opacity 0.3s ease-out;
       transition: opacity 0.3s ease-out; } }
   @media (max-width: 1199px) {
-    .membership__passes label {
+    .membership__passes-input {
       font-size: 18px;
       line-height: 18px;
       padding: 11px 0 17px; } }
   @media (max-width: 767px) {
-    .membership__passes label {
+    .membership__passes-input {
       font-size: 16px;
       line-height: 16px; } }
+  .membership__passes-input--checked {
+    color: #102656; }
+    .membership__passes-input--checked::after {
+      position: absolute;
+      content: "";
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #d10a42; }
 
 .membership__offers {
   margin: 0;

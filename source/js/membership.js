@@ -3,6 +3,10 @@
 (function () {
   var membership = document.querySelector('.membership');
 
+  var ONE_MONTH = '1 месяце';
+  var HALF_YEAR = '6 месяцев';
+  var ONE_YEAR = '12 месяцев';
+
   var Price = {
     Month: {
       COACH: '5000',
@@ -23,7 +27,7 @@
 
   if (membership) {
     var membershipButtons = document.querySelectorAll('.membership__passes-input');
-    var CHECKED = "membership__passes-input--checked";
+    var CHECKED = 'membership__passes-input--checked';
     var membershipCardCoachValue = document.querySelector('.membership__card--coach .membership__price span');
     var membershipCardNoontimeValue = document.querySelector('.membership__card--noontime .membership__price span');
     var membershipCardDayValue = document.querySelector('.membership__card--day .membership__price span');
@@ -54,7 +58,7 @@
     var uncheckAll = function (elements) {
       forEach(elements, function (element) {
         element.classList.remove(CHECKED);
-      })
+      });
     };
 
     var togglersInit = function () {
@@ -62,25 +66,23 @@
         button.addEventListener('click', function () {
           uncheckAll(membershipButtons);
           toggleButton(button);
-          console.dir(this);
           switch (true) {
-            case this.innerText === '1 месяц':
-              setCurrnetPrice(Price.Month)
+            case button.innerText === ONE_MONTH:
+              setCurrnetPrice(Price.Month);
               break;
-            case this.innerText === '6 месяцев':
-              setCurrnetPrice(Price.Semiannual)
+            case button.innerText === HALF_YEAR:
+              setCurrnetPrice(Price.Semiannual);
               break;
-            case this.innerText === '12 месяцев':
-              setCurrnetPrice(Price.Annual)
+            case button.innerText === ONE_YEAR:
+              setCurrnetPrice(Price.Annual);
               break;
             default:
               break;
           }
         });
-      });;
+      });
     };
 
     togglersInit();
   }
 })();
-

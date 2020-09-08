@@ -6,5 +6,3 @@ env:
 extends:
   "htmlacademy/es5"
 
-globals:
-Swiper: readonly
