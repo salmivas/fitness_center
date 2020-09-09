@@ -168,6 +168,7 @@
 
   &:hover {
     @include gradient-border;
+    cursor: pointer;
 
     & .membership__purchase-link {
       color: $white;
