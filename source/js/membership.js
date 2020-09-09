@@ -3,34 +3,18 @@
 (function () {
   var membership = document.querySelector('.membership');
 
-  var ONE_MONTH = '1 месяце';
-  var HALF_YEAR = '6 месяцев';
-  var ONE_YEAR = '12 месяцев';
-
-  var Price = {
-    Month: {
-      COACH: '5000',
-      NOONTIME: '1700',
-      FULL_DAY: '2700',
-    },
-    Semiannual: {
-      COACH: '3000',
-      NOONTIME: '1200',
-      FULL_DAY: '2000',
-    },
-    Annual: {
-      COACH: '2000',
-      NOONTIME: '1000',
-      FULL_DAY: '1500',
-    },
-  };
-
   if (membership) {
-    var membershipButtons = document.querySelectorAll('.membership__passes-input');
-    var CHECKED = 'membership__passes-input--checked';
-    var membershipCardCoachValue = document.querySelector('.membership__card--coach .membership__price span');
-    var membershipCardNoontimeValue = document.querySelector('.membership__card--noontime .membership__price span');
-    var membershipCardDayValue = document.querySelector('.membership__card--day .membership__price span');
+    var membershipTogglers = document.querySelectorAll('.membership__passes-toggler');
+    var membershipOffers = document.querySelectorAll('.membership__offers');
+    var monthToggler = document.querySelector('.membership__month-pass .membership__passes-toggler');
+    var semiannualToggler = document.querySelector('.membership__semiannual-pass .membership__passes-toggler');
+    var annualToggler = document.querySelector('.membership__annual-pass .membership__passes-toggler');
+    var monthOffers = document.querySelector('.membership__offers--month');
+    var semiannualOffers = document.querySelector('.membership__offers--semiannual');
+    var annualOffers = document.querySelector('.membership__offers--annual');
+
+    var VISUALLY_HIDDEN = 'visually-hidden';
+    var TOGGLER_CHECKED = 'membership__passes-toggler--checked';
 
     var forEach = function (array, callback, scope) {
       for (var i = 0; i < array.length; i++) {
@@ -38,51 +22,57 @@
       }
     };
 
-    var setPrice = function (elementToSet, costToset) {
-      if (elementToSet) {
-        elementToSet.innerText = costToset;
-        elementToSet.dataset.price = costToset;
+    var closeOffers = function (offersElement) {
+      if (!offersElement.classList.contains(VISUALLY_HIDDEN)) {
+        offersElement.classList.add(VISUALLY_HIDDEN);
       }
+      return;
     };
 
-    var setCurrnetPrice = function (rate) {
-      setPrice(membershipCardCoachValue, rate.COACH);
-      setPrice(membershipCardNoontimeValue, rate.NOONTIME);
-      setPrice(membershipCardDayValue, rate.FULL_DAY);
+    var uncheckToggler = function (togglerElement) {
+      if (togglerElement.classList.contains(TOGGLER_CHECKED)) {
+        togglerElement.classList.remove(TOGGLER_CHECKED);
+      }
+      return;
     };
 
-    var toggleButton = function (elementToCheck) {
-      elementToCheck.classList.toggle(CHECKED);
+    var closeAllOffers = function (offersArray) {
+      forEach(offersArray, function (offers) {
+        closeOffers(offers);
+      });
     };
 
-    var uncheckAll = function (elements) {
-      forEach(elements, function (element) {
-        element.classList.remove(CHECKED);
+    var uncheckAllTogglers = function (togglersArray) {
+      forEach(togglersArray, function (toggler) {
+        uncheckToggler(toggler);
       });
     };
 
     var togglersInit = function () {
-      forEach(membershipButtons, function (button) {
-        button.addEventListener('click', function () {
-          uncheckAll(membershipButtons);
-          toggleButton(button);
+      forEach(membershipTogglers, function (toggler) {
+        toggler.addEventListener('click', function () {
+          uncheckAllTogglers(membershipTogglers);
+          closeAllOffers(membershipOffers);
           switch (true) {
-            case button.innerText === ONE_MONTH:
-              setCurrnetPrice(Price.Month);
+            case toggler === monthToggler:
+              monthOffers.classList.remove(VISUALLY_HIDDEN);
+              toggler.classList.add(TOGGLER_CHECKED);
               break;
-            case button.innerText === HALF_YEAR:
-              setCurrnetPrice(Price.Semiannual);
+            case toggler === semiannualToggler:
+              semiannualOffers.classList.remove(VISUALLY_HIDDEN);
+              toggler.classList.add(TOGGLER_CHECKED);
               break;
-            case button.innerText === ONE_YEAR:
-              setCurrnetPrice(Price.Annual);
+            case toggler === annualToggler:
+              annualOffers.classList.remove(VISUALLY_HIDDEN);
+              toggler.classList.add(TOGGLER_CHECKED);
               break;
             default:
               break;
           }
+          return;
         });
       });
     };
-
     togglersInit();
   }
 })();

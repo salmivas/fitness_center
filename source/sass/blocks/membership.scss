@@ -91,7 +91,7 @@
   }
 }
 
-.membership__passes-input {
+.membership__passes-toggler {
   @include font-size-height-color(20, 20, $eggplant-50);
   @include on-hover;
 
@@ -127,6 +127,10 @@
       background-color: $punch;
     }
   }
+}
+
+.membership__offers-list {
+  width: 100%;
 }
 
 .membership__offers {
