@@ -19,11 +19,6 @@ body {
   color: $dark-blue;
 
   overflow-x: hidden;
-
-  // only for development
-  &::-webkit-scrollbar {
-    display: none; /*Makes scrollbar hidden*/
-  }
 }
 
 main {

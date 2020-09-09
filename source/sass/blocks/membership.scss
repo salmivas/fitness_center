@@ -144,7 +144,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 
   @media (max-width: $max-tablet-width) {
     flex-direction: column;

@@ -344,9 +344,6 @@ body {
   line-height: 24px;
   color: #102656;
   overflow-x: hidden; }
-  body::-webkit-scrollbar {
-    display: none;
-    /*Makes scrollbar hidden*/ }
 
 main {
   -webkit-box-flex: 1;
