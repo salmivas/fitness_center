@@ -131,6 +131,12 @@
 
 .membership__offers-list {
   width: 100%;
+
+  @media (max-width: $max-tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .membership__offers {
