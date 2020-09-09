@@ -6,7 +6,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 0 0 63px;
+    padding: 0 0 68px;
   }
 }
 
@@ -49,8 +49,6 @@
   @include center-y-by-flex-column;
 
   width: 100%;
-  height: 294px;
-
   overflow: hidden;
 
   @media (max-width: $max-tablet-width) {
@@ -58,9 +56,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    min-width: 226px;
-    min-height: 274px;
-    width: calc(60% * (226 / 274));
+    width: 226px;
     height: 100%;
   }
 }
@@ -92,6 +88,7 @@
 
 .instructors__picture-wrapper {
   position: relative;
+  line-height: 0;
 
   @media (max-width: $max-mobile-width) {
     display: flex;
@@ -119,18 +116,18 @@
 }
 
 .instructors__picture-wrapper picture {
-  height: 100%;
+  // height: auto;
 }
 
 .instructors__picture-wrapper img {
   @media (max-width: $max-tablet-width) {
     width: 268px;
+    height: 294px;
   }
 
   @media (max-width: $max-mobile-width) {
-    min-height: 274px;
-    width: 100%;
-    height: 100%;
+    width: 226px;
+    height: 274px;
   }
 }
 
@@ -158,10 +155,10 @@
 
 .instructors__instructor-wrapper {
   @include hide-scroll-bar;
-
-  width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  width: 100%;
+
+  overflow: scroll;
 }
 
 .instructors__instructor-sphere {
@@ -219,6 +216,10 @@
     @media (max-width: $max-tablet-width) {
       left: 0;
     }
+
+    @media (max-width: $max-mobile-width) {
+      left: calc(40% - 116px);
+    }
   }
 
   &--next {
@@ -226,6 +227,10 @@
 
     @media (max-width: $max-tablet-width) {
       right: 0;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      right: calc(40% - 116px);
     }
   }
 }
