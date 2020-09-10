@@ -429,7 +429,7 @@ h2 {
   background: radial-gradient(circle at left bottom, #003e85 15%, #b80028 50%);
   background-image: url("../img/wrapper_desktop_photo-bg@1x.jpg"), url("../img/wrapper_conic-gradient-bg@1x.jpg");
   background-repeat: no-repeat;
-  background-position: calc(30% + 303px) center, 0 0;
+  background-position: calc(50% + 130px) center, 0 0;
   background-size: auto, cover; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .wrapper {
@@ -526,9 +526,11 @@ h2 {
       padding: 57px 0 79px; } }
 
 .intro__text-content-wrapper {
+  width: 37%;
   max-width: 396px; }
   @media (max-width: 1199px) {
     .intro__text-content-wrapper {
+      width: auto;
       max-width: 324px;
       margin-left: calc(10% - 68px); } }
   @media (max-width: 767px) {
@@ -734,6 +736,7 @@ h2 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      overflow: hidden;
       padding: 100px 0 177px; } }
   @media (max-width: 767px) {
     .gym__container {
@@ -806,9 +809,9 @@ h2 {
 
 @media (max-width: 1199px) {
   .gym__picture {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
+    width: 860px;
+    height: 345px;
+    overflow: hidden; } }
 
 @media (max-width: 767px) {
   .gym__picture {
@@ -819,7 +822,12 @@ h2 {
   @media (max-width: 1199px) {
     .gym__picture img {
       margin: 0;
-      width: 820px; } }
+      height: 345px;
+      width: 860px;
+      -o-object-fit: fill;
+         object-fit: fill;
+      -o-object-position: 1px 2px;
+         object-position: 1px 2px; } }
   @media (max-width: 767px) {
     .gym__picture img {
       width: 600px; } }
