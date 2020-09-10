@@ -1,12 +1,4 @@
 .header {
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: 2;
-}
-
-.header__container {
   @include container;
   @include font-size-height-color(26, 26);
 
@@ -44,7 +36,7 @@
   }
 }
 
-.header__contacts a {
+.header__phone {
   @include on-hover;
 
   color: $white;

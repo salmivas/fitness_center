@@ -1,12 +1,12 @@
 .offers {
-  padding: 118px 0;
+  padding: 118px 0 59px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 99px 0;
+    padding: 99px 0 50px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 68px 0;
+    padding: 68px 0 34px;
   }
 }
 
@@ -109,7 +109,7 @@
   }
 }
 
-.offers__major-headline {
+.offers__major-text-container h3 {
   @include font-size-height-color(28, 28);
 
   margin: 0 0 21px;
@@ -127,7 +127,7 @@
   }
 }
 
-.offers__major-description {
+.offers__major-text-container h3 + p {
   @include font-size-height-color(18, 25);
 
   margin: 0;

@@ -1,0 +1,32 @@
+.wrapper {
+  background: radial-gradient(circle at left bottom, $blue 15%, $crimson 50%);
+  background-image: url("../img/wrapper_desktop_photo-bg@1x.jpg"), url("../img/wrapper_conic-gradient-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: calc(30% + 303px) center, 0 0;
+  background-size: auto, cover;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/wrapper_desktop_photo-bg@2x.jpg"), url("../img/wrapper_conic-gradient-bg@2x.jpg");
+    background-size: 500px 556px, cover;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    background-image: url("../img/wrapper_tablet_photo-bg@1x.jpg"), url("../img/wrapper_conic-gradient-bg@1x.jpg");
+    background-position: 90% center, 0 0;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/wrapper_tablet_photo-bg@2x.jpg"), url("../img/wrapper_conic-gradient-bg@2x.jpg");
+      background-size: 324px 390px, cover;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/wrapper_conic-gradient-bg@1x.jpg");
+    background-position: 0 0;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/wrapper_conic-gradient-bg@2x.jpg");
+    }
+  }
+}

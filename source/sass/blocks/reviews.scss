@@ -1,12 +1,12 @@
 .reviews {
-  padding: 0 0 122px;
+  padding: 59px 0 122px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 0 0 101px;
+    padding: 49px 0 101px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 0 0 65px;
+    padding: 34px 0 65px;
   }
 }
 
@@ -102,7 +102,7 @@
   }
 }
 
-.reviews__review-name {
+.reviews__review-container p:first-of-type {
   @include font-size-height-color(20, 20);
 
   margin: 0 0 16px;
@@ -120,7 +120,7 @@
   }
 }
 
-.reviews__review-body {
+.reviews__review-container p:last-of-type {
   @include font-size-height-color(16, 23);
 
   margin: 0;

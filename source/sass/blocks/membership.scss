@@ -216,7 +216,7 @@
   }
 }
 
-.membership__options {
+.membership__card p:first-of-type {
   @include font-size-height-color(16, 24, $aegean);
 
   margin: 0 0 65px;
@@ -226,7 +226,7 @@
   }
 }
 
-.membership__price {
+.membership__card p:last-of-type {
   align-self: flex-start;
   margin: 0 0 35px 9%;
 
@@ -239,7 +239,7 @@
   }
 }
 
-.membership__price span {
+.membership__card span {
   @include font-size-height-color(60, 90, $navy);
 
   position: relative;
@@ -276,7 +276,7 @@
   }
 }
 
-.membership__price svg {
+.membership__card svg {
   position: relative;
   z-index: 1;
 

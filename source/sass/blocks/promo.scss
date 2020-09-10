@@ -1,12 +1,12 @@
 .promo {
-  padding: 120px 0 117px;
+  padding: 120px 0 60px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 100px 0;
+    padding: 100px 0 50px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 71px 0 70px;
+    padding: 71px 0 35px;
   }
 }
 
@@ -85,7 +85,7 @@
   }
 }
 
-.promo__evetn-date {
+.promo__event-date {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 21px;
@@ -95,7 +95,8 @@
   }
 }
 
-.promo__time-unit {
+.promo__event-date span,
+.promo__event-time span:first-child {
   @include font-size-height-color(18, 20);
 
   display: block;
@@ -120,35 +121,37 @@
   }
 }
 
-.promo__day-number {
-  @include font-size-height-color(40, 40);
-
-  margin-right: 6px;
-
-  font-weight: bold;
-
-  @media (max-width: $max-tablet-width) {
-    @include font-size-height-color(24, 24);
-
-    margin-right: 4px;
-  }
-}
-
-.promo__month-year-wrapper {
+.promo__date-block p {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-.promo__month-year-wrapper span {
+.promo__date-block span {
   @include font-size-height-color(14, 19);
+
+  margin: 0;
 
   @media (max-width: $max-tablet-width) {
     @include font-size-height-color(10, 12);
   }
+
+  &:only-of-type {
+    @include font-size-height-color(40, 40);
+
+    margin-right: 6px;
+
+    font-weight: bold;
+
+    @media (max-width: $max-tablet-width) {
+      @include font-size-height-color(24, 24);
+
+      margin-right: 4px;
+    }
+  }
 }
 
-.promo__time-block {
+.promo__event-time span:last-child {
   @include font-size-height-color(40, 50);
 
   display: block;
@@ -162,7 +165,7 @@
   }
 }
 
-.promo__event-description {
+.promo__headline-wrapper + p {
   @include font-size-height-color(18, 27, $white);
 
   margin: 0 0 47px;

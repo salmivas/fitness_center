@@ -1,44 +1,16 @@
 .intro {
-  background: radial-gradient(circle at left bottom, $blue 15%, $crimson 50%);
-  background-image: url("../img/intro_conic-gradient-bg@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
-
-  @media (min-resolution: $retina-dpi) {
-    background-image: url("../img/intro_conic-gradient-bg@2x.jpg");
-  }
-}
-
-.intro__container {
   @include container;
 
   position: relative;
 
-  padding: 169px 0 93px;
-
-  background: url("../img/intro_desktop_photo-bg@1x.jpg") calc(396px + 10%) center no-repeat;
-
-  @media (min-resolution: $retina-dpi) {
-    background-image: url("../img/intro_desktop_photo-bg@2x.jpg");
-    background-size: 500px 556px;
-  }
+  padding: 85px 0 93px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 136px 0 104px;
-
-    background: url("../img/intro_tablet_photo-bg@1x.jpg") right calc(10% - 36px) center no-repeat;
-
-    @media (min-resolution: $retina-dpi) {
-      background-image: url("../img/intro_tablet_photo-bg@2x.jpg");
-      background-size: 324px 390px;
-    }
+    padding: 36px 0 104px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 113px 0 79px;
-
-    background: none;
+    padding: 57px 0 79px;
   }
 }
 
@@ -56,7 +28,7 @@
   }
 }
 
-.intro__city {
+.intro__text-content-wrapper p:first-of-type {
   @include font-size-height-color(49, 49, $white);
 
   margin: 0 0 11px;

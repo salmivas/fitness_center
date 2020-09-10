@@ -37,6 +37,7 @@
     @include container;
 
     align-items: flex-start;
+    margin: 0 0 26px;
   }
 }
 
@@ -44,27 +45,7 @@
   margin: 0 0 7px;
 }
 
-.gym__subtitle {
-  @include font-size-height-color(18, 27);
-
-  margin: 0 0 40px;
-
-  @media (max-width: $max-tablet-width) {
-    margin: 0 0 36px;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    margin: 0 0 24px;
-  }
-}
-
-.gym__info {
-  @media (max-width: $max-mobile-width) {
-    margin: 0 0 26px;
-  }
-}
-
-.gym__info p {
+.gym__text-content-wrapper p {
   margin: 0;
 
   font-weight: 300;
@@ -79,6 +60,28 @@
 
   @media (max-width: $max-mobile-width) {
     text-align: left;
+  }
+
+  &:first-of-type {
+    @include font-size-height-color(18, 27);
+
+    margin: 0 0 40px;
+
+    font-weight: normal;
+
+    @media (max-width: $max-tablet-width) {
+      margin: 0 0 36px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin: 0 0 24px;
+    }
+  }
+
+  &:last-of-type {
+    @media (max-width: $max-tablet-width) {
+      display: none;
+    }
   }
 }
 

@@ -1,12 +1,12 @@
 .instructors {
-  padding: 0 0 119px;
+  padding: 57px 0 119px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 0 0 100px;
+    padding: 50px 0 100px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 0 0 68px;
+    padding: 35px 0 68px;
   }
 }
 
@@ -81,7 +81,7 @@
     display: block;
   }
 
-  &:hover .instructors__instructor-name--picture {
+  &:hover .instructors__picture-wrapper p {
     display: none;
   }
 }
@@ -98,21 +98,18 @@
   }
 }
 
-.instructors__instructor-name {
+.instructors__picture-wrapper p {
   @include font-size-height-color(18, 18, $white);
 
-  margin: 0;
-
-  font-weight: bold;
-  text-align: center;
-}
-
-.instructors__picture-wrapper .instructors__instructor-name {
   position: absolute;
   bottom: 34px;
   left: 0;
 
   width: 100%;
+  margin: 0;
+
+  font-weight: bold;
+  text-align: center;
 }
 
 .instructors__picture-wrapper img {
@@ -155,14 +152,23 @@
   width: 100%;
 }
 
-.instructors__instructor-sphere {
+.instructors__instructor-wrapper p:first-of-type {
+  @include font-size-height-color(18, 18, $white);
+
+  margin: 0;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.instructors__instructor-wrapper p:last-of-type {
   margin: 0 0 34px;
 
   color: $stone;
   text-align: center;
 }
 
-.instructors__instructor-advantages {
+.instructors__instructor-wrapper ul {
   @include list-style-reset;
 
   margin-left: 5.8%;
@@ -170,7 +176,7 @@
   color: $white;
 }
 
-.instructors__instructor-advantages li {
+.instructors__instructor-wrapper li {
   display: flex;
 
   @include font-size-height-color(14, 21);

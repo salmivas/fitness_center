@@ -6,9 +6,9 @@
   if (membership) {
     var membershipTogglers = document.querySelectorAll('.membership__passes-toggler');
     var membershipOffers = document.querySelectorAll('.membership__offers');
-    var monthToggler = document.querySelector('.membership__month-pass .membership__passes-toggler');
-    var semiannualToggler = document.querySelector('.membership__semiannual-pass .membership__passes-toggler');
-    var annualToggler = document.querySelector('.membership__annual-pass .membership__passes-toggler');
+    var monthToggler = document.querySelector('.membership__passes-toggler--month');
+    var semiannualToggler = document.querySelector('.membership__passes-toggler--semiannual');
+    var annualToggler = document.querySelector('.membership__passes-toggler--annual');
     var monthOffers = document.querySelector('.membership__offers--month');
     var semiannualOffers = document.querySelector('.membership__offers--semiannual');
     var annualOffers = document.querySelector('.membership__offers--annual');
