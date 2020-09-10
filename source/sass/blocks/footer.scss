@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 40px 0 38px;
 
   @media (max-width: $max-tablet-width) {
     padding: 43px 0;
@@ -64,6 +64,8 @@
 }
 
 .footer__navigation li {
+  margin: 5px 0;
+
   &:first-of-type {
     display: none;
   }
@@ -116,6 +118,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  flex-shrink: 0;
 
   @media (max-width: $max-mobile-width) {
     width: 55%;
