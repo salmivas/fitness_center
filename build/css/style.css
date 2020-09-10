@@ -441,12 +441,16 @@ h2 {
       background-position: 90% center, 0 0; } }
   @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi) {
     .wrapper {
-      background-image: url("../img/wrapper_tablet_photo-bg@2x.jpg");
+      background-image: url("../img/wrapper_tablet_photo-bg@2x.jpg"), url("../img/wrapper_conic-gradient-bg@2x.jpg");
       background-size: 324px 390px, cover; } }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  @media (max-width: 767px) {
     .wrapper {
-      background-image: url("../img/wrapper_tablet_photo-bg@2x.jpg");
-      background-size: 324px 390px; } }
+      background-image: url("../img/wrapper_conic-gradient-bg@1x.jpg");
+      background-position: 0 0;
+      background-size: cover; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
+    .wrapper {
+      background-image: url("../img/wrapper_conic-gradient-bg@2x.jpg"); } }
 
 .header {
   width: calc(100% - 206px);
@@ -519,7 +523,7 @@ h2 {
       padding: 36px 0 104px; } }
   @media (max-width: 767px) {
     .intro {
-      padding: 113px 0 79px; } }
+      padding: 57px 0 79px; } }
 
 .intro__text-content-wrapper {
   max-width: 396px; }
@@ -1238,13 +1242,13 @@ h2 {
       outline: -webkit-focus-ring-color auto 1px; } }
 
 .promo {
-  padding: 120px 0 117px; }
+  padding: 120px 0 60px; }
   @media (max-width: 1199px) {
     .promo {
-      padding: 100px 0; } }
+      padding: 100px 0 50px; } }
   @media (max-width: 767px) {
     .promo {
-      padding: 71px 0 70px; } }
+      padding: 71px 0 35px; } }
 
 .promo__container {
   width: calc(100% - 206px);
@@ -1449,13 +1453,13 @@ h2 {
     min-height: 292px; } }
 
 .instructors {
-  padding: 0 0 119px; }
+  padding: 57px 0 119px; }
   @media (max-width: 1199px) {
     .instructors {
-      padding: 0 0 100px; } }
+      padding: 50px 0 100px; } }
   @media (max-width: 767px) {
     .instructors {
-      padding: 0 0 68px; } }
+      padding: 35px 0 68px; } }
 
 .instructors__container {
   width: calc(100% - 206px);
@@ -1984,13 +1988,13 @@ h2 {
   max-width: 100%; }
 
 .offers {
-  padding: 118px 0; }
+  padding: 118px 0 59px; }
   @media (max-width: 1199px) {
     .offers {
-      padding: 99px 0; } }
+      padding: 99px 0 50px; } }
   @media (max-width: 767px) {
     .offers {
-      padding: 68px 0; } }
+      padding: 68px 0 34px; } }
 
 .offers h2 {
   margin: 0 0 52px;
@@ -2253,13 +2257,13 @@ h2 {
       transition: opacity 0.3s ease-out; } }
 
 .reviews {
-  padding: 0 0 122px; }
+  padding: 59px 0 122px; }
   @media (max-width: 1199px) {
     .reviews {
-      padding: 0 0 101px; } }
+      padding: 49px 0 101px; } }
   @media (max-width: 767px) {
     .reviews {
-      padding: 0 0 65px; } }
+      padding: 34px 0 65px; } }
 
 .reviews__container {
   width: calc(100% - 206px);

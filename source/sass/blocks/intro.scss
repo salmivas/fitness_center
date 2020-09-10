@@ -15,9 +15,11 @@
 }
 
 .intro__text-content-wrapper {
+  width: 37%;
   max-width: 396px;
 
   @media (max-width: $max-tablet-width) {
+    width: auto;
     max-width: 324px;
     margin-left: calc(10% - 68px);
   }
